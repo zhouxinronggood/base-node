@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ESM run in browser</title>
+  </head>
+  <body>
+    <h1>ESM run in browser</h1>
+    <!-- type="module" 属性, 表示这个 script 是使用了 ESM 模块 -->
+    <!-- 注意需要先通过 `importmap` 引入 npm 包的 CDN -->
+    <script type="importmap">
+        {
+          "imports": {
+            "md5": "https://esm.run/md5"
+          }
+        }
+    </script>
+    <!-- 然后才能在 `module` 里 `import xx from 'xx'` -->
+    <script type="module" src="./index.mjs"></script>
+  </body>
+</html>

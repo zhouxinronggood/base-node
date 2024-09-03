@@ -1,0 +1,42 @@
+{
+  "name": "hello-node",
+  "version": "1.0.0",
+  "description": "基础node项目",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node index",
+    "dev:cjs": "node src/cjs/index.cjs",
+    "dev:esm": "node src/esm/index.mjs",
+    "dev:ts": "ts-node src/ts/index.ts",
+    "serve": "node server/index.js",
+    "compile": "babel src/babel --out-dir compiled",
+    "build": "tsc src/ts/index.ts --skipLibCheck --outDir dist",
+    "build:target": "tsc src/ts/index.ts --skipLibCheck --outDir dist --target es6",
+    "dev:optionalts": "ts-node src/ts/objectOptional.ts",
+    "dev:classtypets": "ts-node src/ts/classType.ts",
+    "dev:classextends": "ts-node src/ts/classextends.ts",
+    "dev:classtointer": "ts-node src/ts/classtointer.ts",
+    "dev:promisedemo": "ts-node src/ts/promisedemo.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhouxinronggood/base-node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhouxinronggood/base-node/issues"
+  },
+  "homepage": "https://github.com/zhouxinronggood/base-node#readme",
+  "dependencies": {
+    "md5": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.25.6",
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}
